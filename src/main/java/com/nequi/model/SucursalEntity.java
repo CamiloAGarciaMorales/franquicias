@@ -1,18 +1,23 @@
 package com.nequi.model;
 
 
+import jdk.jfr.DataAmount;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 
+@Table("sucursal")
 public class SucursalEntity {
 
-
+    @Id
     private Long id;
 
     private String nombre;
     private String direccion;
 
-
-    private FranquiciaEntity franquicia;
+    @Column("id_franquicia")
+    private Long franquiciaId;
 
     public Long getId() {
         return id;
@@ -38,11 +43,11 @@ public class SucursalEntity {
         this.direccion = direccion;
     }
 
-    public FranquiciaEntity getFranquicia() {
-        return franquicia;
+    public Long getFranquiciaId() {
+        return franquiciaId;
     }
 
-    public void setFranquicia(FranquiciaEntity franquicia) {
-        this.franquicia = franquicia;
+    public void setFranquiciaId(Long franquiciaId) {
+        this.franquiciaId = franquiciaId;
     }
 }

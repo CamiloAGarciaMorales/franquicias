@@ -1,16 +1,23 @@
 package com.nequi.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table("sucursal_producto")
 public class SucursalProductoEntity {
 
+    @Id
     private Long id;
 
+    @Column("stock")
     private int Stock;
 
-    private SucursalEntity sucursal;
+    @Column("id_sucursal")
+    private Long sucursalId;
 
-
-    private ProductoEntity producto;
+    @Column("id_producto")
+    private Long productoId;
 
 
     public Long getId() {
@@ -29,19 +36,19 @@ public class SucursalProductoEntity {
         Stock = stock;
     }
 
-    public SucursalEntity getSucursal() {
-        return sucursal;
+    public Long getSucursalId() {
+        return sucursalId;
     }
 
-    public void setSucursal(SucursalEntity sucursal) {
-        this.sucursal = sucursal;
+    public void setSucursalId(Long sucursalId) {
+        this.sucursalId = sucursalId;
     }
 
-    public ProductoEntity getProducto() {
-        return producto;
+    public Long getProductoId() {
+        return productoId;
     }
 
-    public void setProducto(ProductoEntity producto) {
-        this.producto = producto;
+    public void setProductoId(Long productoId) {
+        this.productoId = productoId;
     }
 }

@@ -1,9 +1,12 @@
 package com.nequi.model;
 
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table("producto")
 public class ProductoEntity {
-
+    @Id
     private Long id;
 
     private String nombre;
