@@ -9,4 +9,6 @@ public interface SucursalRepository extends ReactiveCrudRepository<SucursalEntit
     Mono<SucursalEntity> findById(Long id);
 
     Flux<SucursalEntity> findByFranquiciaId(Long franquiciaId);
+
+    Flux<SucursalEntity> findAllByFranquiciaId(Long franquiciaId);
 }

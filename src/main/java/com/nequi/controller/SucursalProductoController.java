@@ -25,7 +25,6 @@ public class SucursalProductoController {
     private final SucursalRepository sucursalRepository;
     private final SucursalProductoRepository sucursalProductoRepository;
 
-
     public SucursalProductoController(ProductoRepository productoRepository, SucursalRepository sucursalRepository, SucursalProductoRepository sucursalProductoRepository) {
         this.productoRepository = productoRepository;
         this.sucursalRepository = sucursalRepository;

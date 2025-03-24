@@ -16,5 +16,7 @@ public interface SucursalProductoRepository extends ReactiveCrudRepository<Sucur
     Mono<Void> deleteBySucursalIdAndProductoId(Long sucursalId, Long productoId);
 
     Flux<SucursalProductoEntity> findBySucursalIdIn(List<Long> sucursalIds);
+
+
 }
 
